@@ -10,12 +10,12 @@ const _ = require("lodash");
 
 const app = express();
 app.set("view engine", "ejs");
-const url = process.env.MONO_URL;
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
  // code to connect with the mongoDB atlas.
-//const url = "mongodb+srv://shashwatanand:qwerty1234@cluster0.nfrgcft.mongodb.net/?retryWrites=true";
+ const url = process.env.MONO_URL;
 mongoose.connect(url , {
   useNewUrlParser : true , 
   dbName : "todolistDB"
