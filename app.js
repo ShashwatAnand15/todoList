@@ -156,6 +156,6 @@ app.post("/work" , function(req , res){
 app.get("/about" , function(req,res){
   res.render("about");
 })
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server is running 3000.");
 });
